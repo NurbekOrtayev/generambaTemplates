@@ -1,0 +1,34 @@
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+final class {{ module_info.name }}ModuleAssembly: BaseModuleAssembly, {{ module_info.name }}ModuleAssemblying {
+    func assemble(_ configuration: {{ module_info.name }}Configuration? = nil) -> UIViewController {
+        
+        let presenter: {{ module_info.name }}Presenter = .init()
+        
+        let viewController: {{ module_info.name }}ViewController = .init()
+        presenter.view = viewController
+        viewController.output = presenter
+        
+        let router: {{ module_info.name }}Router = .init()
+        router.viewCtrl = viewController
+        presenter.router = router
+                
+        let interactor: {{ module_info.name }}Interactor = .init()
+        interactor.output = presenter
+        presenter.interactor = interactor
+        
+        let viewManager: {{ module_info.name }}ViewManager = .init() // remove if not needed
+        viewController.viewManager = viewManager
+        
+        presenter.moduleOutput = configuration?(presenter)
+        
+        return viewController
+    }
+}
