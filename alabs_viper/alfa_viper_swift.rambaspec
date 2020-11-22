@@ -1,7 +1,7 @@
 # Template information section
-name: "alfa_viper_swift"
-summary: "Swift VIPER module template for AlfaMobile project"
-author: "Azamat Kalmurzayev"
+name: "alabs_viper"
+summary: "Swift VIPER module template"
+author: "A Labs"
 
 # The declarations for code files
 
