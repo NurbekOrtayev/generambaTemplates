@@ -31,15 +31,3 @@ code_files:
 # Assembly
 - {name: Assembly/Assemblying.swift, path: Code/Assembly/assemblying.swift.liquid}
 - {name: Assembly/Assembly.swift, path: Code/Assembly/assembly.swift.liquid}
-
-# The declarations for test files
-test_files:
-
-# Configurators tests
-- {name: Assembly/AssemblyTests.swift, path: Tests/Assembly/assembly_tests.swift.liquid}
-
-# View tests
-- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
-
-# Presenter tests
-- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
